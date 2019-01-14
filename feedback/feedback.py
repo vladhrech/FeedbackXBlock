@@ -187,9 +187,9 @@ class FeedbackXBlock(XBlock):
             styling. For example, at the time of this writing, we do
             selected through CSS, rather than by using those icons.
             '''
-            templates = {'inactive': 'public/default_icons/i{set}{i}.png',
-                         'active': 'public/default_icons/a{set}{i}.png',
-                         'selected': 'public/default_icons/s{set}{i}.png'}
+            templates = {'inactive': 'public/default_icons/i{set}{i}.png?raw',
+                         'active': 'public/default_icons/a{set}{i}.png?raw',
+                         'selected': 'public/default_icons/s{set}{i}.png?raw'}
             template = templates[icon_type]
             icon_file = template.format(i=i, set=prompt['icon_set'])
             return self.runtime.local_resource_url(self, icon_file)
