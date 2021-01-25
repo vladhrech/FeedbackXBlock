@@ -22,7 +22,7 @@ def package_data(pkg, roots):
 
 setup(
     name='feedback-xblock',
-    version='1.1',
+    version='1.2.0',
     description='XBlock for providing feedback on course content',
     packages=[
         'feedback',
@@ -39,5 +39,5 @@ setup(
             'feedbacktest = feedbacktests:TestFeedback',
         ]
     },
-    package_data=package_data("feedback", ["static", "public"]),
+    package_data=package_data("feedback", ["static", "public", "translations"]),
 )

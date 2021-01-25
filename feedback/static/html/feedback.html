@@ -1,17 +1,47 @@
 <div class="feedback_block">
-  <form action="" onsubmit="return false;">
-    <fieldset class="feedback_likert_field">
-      <legend class="feedback_likert_header">{likert_prompt}</legend>
-      <div class="feedback_likert_scale">{scale}</div>
-    </fieldset>
+    <form action="" onsubmit="return false;">
+        <fieldset class="feedback_likert_field">
+            <legend class="feedback_likert_header">${likert_prompts}</legend>
+            <div class="feedback_likert_scale">
 
-    <div class="feedback_header_div">
-      <label class="feedback_header" for="feedback_freeform_textarea">{freeform_prompt}</label>
-    </div>
-    <div class="feedback_freeform_input">
-      <textarea name="feedback_freeform_textarea" class="feedback_freeform_area" rows="6" cols="45" placeholder="{placeholder}">{self.user_freeform}</textarea>
-      <div class="feedback_thank_you" aria-live=polite>{response}</div>
-    </div>
-    <button type="submit" class="feedback_submit_feedback"> Submit Feedback </button>
-  </form>
+                <%
+                    votes_t = votes
+                    active_vote_t = active_vote
+                %>
+                % if enable_zero_grade:
+                    <%
+                        zero_vote = votes_t[0]
+                        zero_active_vote = active_vote_t[0]
+                        scale_text, ina_icon, act_icon = zero_likert_item
+                        zero_item_idx = 0
+                    %>
+                    <%
+                        votes_t = votes_t[1:]
+                        active_vote_t = active_vote_t[1:]
+                    %>
+                    <%include file="static/html/scale_item.html" args="scale_text=scale_text, idx=zero_item_idx, ina_icon=ina_icon, act_icon=act_icon, vote_cnt=zero_vote, active_v=zero_active_vote"/>
+                % endif
+
+                % for scale_text, ina_icon, act_icon, vote_cnt, active_v in zip(scale.values(), inactive_urls, active_urls, votes_t, active_vote_t):
+                    <% feedback_loop = loop.index + 1 %>
+                    <%include file="static/html/scale_item.html" args="scale_text=scale_text, idx=feedback_loop, ina_icon=ina_icon, act_icon=act_icon, vote_cnt=vote_cnt, active_v=active_v"/>
+                % endfor
+
+            </div>
+        </fieldset>
+
+        % if enable_text_area_answer:
+            <div class="feedback_header_div">
+                <label class="feedback_header" for="feedback_freeform_textarea">${freeform_prompts}</label>
+            </div>
+            <div class="feedback_freeform_input">
+                <textarea id="feedback_freeform_textarea" name="feedback_freeform_textarea" class="feedback_freeform_area" placeholder="${placeholder}">${user_freeform}</textarea>
+            </div>
+        % endif
+        <div class="feedback_thank_you" aria-live=polite>${response}</div>
+        % if enable_text_area_answer:
+            <button class="feedback_submit_feedback">${submit}</button>
+        % endif
+
+    </form>
 </div>

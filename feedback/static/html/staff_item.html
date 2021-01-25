@@ -1,15 +1,18 @@
+<%page args="scale_text, idx, ina_icon, act_icon, vote_cnt, active_v"/>
+
+
 <div class="feedback_likert_rating">
-  <label title="{scale_text}" class="feedback_likert_label">
-    <input data-id="radio_{idx}" name="feedback_scale" class="feedback_radio" type="radio" {active}/>
+  <label title="${scale_text}" class="feedback_likert_label">
+    <input data-id="radio_${idx}" name="feedback_scale" class="feedback_radio" type="radio" ${active_v}/>
     <span class="feedback_icon feedback_icon_inactive">
-      <img src="{ina_icon}" alt="{unicode_icon}"/>
+      <img src="${ina_icon}" alt="${'ina_icon-{}'.format(idx)}"/>
     </span>
     <span class="feedback_icon feedback_icon_active">
-      <img src="{act_icon}" alt="{unicode_icon}"/>
+      <img src="${act_icon}" alt="${'act_icon-{}'.format(idx)}"/>
     </span>
     <br/>
-    <span>{scale_text}</span>
-    <br/>
-    ({vote_cnt})
+    <span>${scale_text}</span>
+      <br/>
+        (${vote_cnt})
   </label>
 </div>
