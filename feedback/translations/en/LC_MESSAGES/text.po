@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-27 07:44-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: feedback/feedback.py:26
+msgid "What did you learn from this? What was missing?"
+msgstr ""
+
+#: feedback/feedback.py:27
+msgid "How would you rate this as a learning experience?"
+msgstr ""
+
+#: feedback/feedback.py:28
+msgid ""
+"Take a little bit of time to reflect here. Research shows that a meaningful "
+"synthesis will help you better understand and remember material from this "
+"course."
+msgstr ""
+
+#: feedback/feedback.py:55
+msgid "Freeform user prompts"
+msgstr ""
+
+#: feedback/feedback.py:61 feedback/feedback.py:77
+msgid "Random number generated for p. -1 if uninitialized"
+msgstr ""
+
+#: feedback/feedback.py:66
+msgid "How user voted. -1 if didn't vote"
+msgstr ""
+
+#: feedback/feedback.py:72
+msgid "What percent of the time should this show?"
+msgstr ""
+
+#: feedback/feedback.py:82
+msgid "A list of user votes"
+msgstr ""
+
+#: feedback/feedback.py:85
+msgid "Feedback"
+msgstr ""
+
+#: feedback/feedback.py:89
+msgid "Enables ability to add text feedback for a student"
+msgstr ""
+
+#: feedback/feedback.py:94
+msgid "Enables ability to add extra 0 grade"
+msgstr ""
+
+#: feedback/feedback.py:98
+msgid "Display Name"
+msgstr ""
+
+#: feedback/feedback.py:99
+msgid "Provide Feedback"
+msgstr ""
+
+#: feedback/feedback.py:100 feedback/static/html/studio_view.html:23
+msgid "The display name for this component."
+msgstr ""
+
+#: feedback/feedback.py:158 feedback/feedback.py:282
+msgid "Thank you for voting!"
+msgstr ""
+
+#: feedback/feedback.py:279
+msgid "Please, vote!"
+msgstr ""
+
+#: feedback/feedback.py:293
+msgid "Thank you for your feedback!"
+msgstr ""
+
+#: feedback/static/html/studio_view.html:5
+msgid ""
+"This XBlock allows\n"
+"        you to collect student feedback on pieces of the course. This\n"
+"        may be helpful either for course improvement, or to give\n"
+"        students a chance to reflect on what they have done."
+msgstr ""
+
+#: feedback/static/html/studio_view.html:10
+msgid ""
+"Prior to using this\n"
+"        block, we recommend reading about best practices in the edX\n"
+"        documentation. In particular, we do recommend asking for\n"
+"        structured, specific feedback, and we advise using this in\n"
+"        conjunction with\n"
+"        the <a href=\"http://edx.readthedocs.org/projects/edx-partner-course-"
+"staff/en/latest/content_experiments/content_experiments_configure.html"
+"\">RCT\n"
+"        framework</a> for matrix sampling."
+msgstr ""
+
+#: feedback/static/html/studio_view.html:20
+msgid "Display name"
+msgstr ""
+
+#: feedback/static/html/studio_view.html:28
+msgid "Enable text area answer"
+msgstr ""
+
+#: feedback/static/html/studio_view.html:39
+msgid "Freeform prompt"
+msgstr ""
+
+#: feedback/static/html/studio_view.html:42
+msgid "Example: Please provide us feedback on this section."
+msgstr ""
+
+#: feedback/static/html/studio_view.html:47
+msgid "Freeform placeholder"
+msgstr ""
+
+#: feedback/static/html/studio_view.html:50
+msgid "This is shown as grayed out text before the student has answered."
+msgstr ""
+
+#: feedback/static/html/studio_view.html:55
+msgid "Likert prompt"
+msgstr ""
+
+#: feedback/static/html/studio_view.html:58
+msgid "Example: Please rate your overall experience with this section."
+msgstr ""
+
+#: feedback/static/html/studio_view.html:62
+msgid ""
+"Set your assessment text to the each input below. For example, \"Excellent\"."
+msgstr ""
+
+#: feedback/static/html/studio_view.html:67
+msgid "Activate 0 grade"
+msgstr ""
+
+#: feedback/static/html/studio_view.html:74
+#: feedback/static/html/studio_view.html:83
+msgid "Likert option"
+msgstr ""
+
+#: feedback/static/html/studio_view.html:94
+msgid "Save"
+msgstr ""
+
+#: feedback/static/html/studio_view.html:97
+msgid "Cancel"
+msgstr ""
+
+msgid "Submit Feedback"
+msgstr ""

@@ -9,6 +9,7 @@ import cgi
 import random
 import pkg_resources
 import six
+from django.utils.translation import ugettext_lazy as _
 
 from xblock.core import XBlock
 from xblock.fields import Boolean, Dict, Integer, List, Float, Scope, String
@@ -16,8 +17,6 @@ from xblockutils.resources import ResourceLoader
 from web_fragments.fragment import Fragment
 
 
-# Make '_' a no-op so we can scrape strings
-_ = lambda text: text
 loader = ResourceLoader(__name__)
 
 
@@ -26,8 +25,6 @@ loader = ResourceLoader(__name__)
 # "What did you think?" and "How did you like it?".
 DEFAULT_FREEFORM = _("What did you learn from this? What was missing?")
 DEFAULT_LIKERT = _("How would you rate this as a learning experience?")
-DEFAULT_DEFAULT = _("Think about the material, and try to synthesize key "
-                    "lessons learned, as well as key gaps in our presentation.")
 DEFAULT_PLACEHOLDER = _("Take a little bit of time to reflect here. "
                         "Research shows that a meaningful synthesis will help "
                         "you better understand and remember material from this "
@@ -48,7 +45,6 @@ class FeedbackXBlock(XBlock):
     prompt = Dict(
         default={
             "freeform": DEFAULT_FREEFORM,
-            "default_text": DEFAULT_DEFAULT,
             "likert": DEFAULT_LIKERT,
             "placeholder": DEFAULT_PLACEHOLDER,
             "scale_text": {i: "" for i in range(1, ASSESSMENTS_NUMBER)},
@@ -179,7 +175,7 @@ class FeedbackXBlock(XBlock):
             "votes": votes,
             "active_vote": active_vote,
             "enable_zero_grade": self.enable_zero_grade,
-            "submit": _("Submit Feedback")
+            "ugettext": _
         }
 
         rendered = loader.render_mako_template(
@@ -212,10 +208,10 @@ class FeedbackXBlock(XBlock):
         context["display_name"] = self.display_name
         context["enable_text_area_answer"] = self.enable_text_area_answer
         context["enable_zero_grade"] = self.enable_zero_grade
-
-        html = loader.render_mako_template(
+        html = loader.render_django_template(
             "static/html/studio_view.html",
-            context=context
+            context=context,
+            i18n_service=self.runtime.service(self, "i18n")
         )
         frag = Fragment(html)
         js_str = self.resource_string("static/js/src/studio.js")
@@ -229,7 +225,7 @@ class FeedbackXBlock(XBlock):
         Called when submitting the form in Studio.
         """
         for item in ["freeform", "likert", "placeholder", "icon_set"]:
-            item_submission = data.get(item, None)
+            item_submission = data.get(item)
             if item_submission and len(item_submission) > 0:
                 self.prompt[item] = cgi.escape(item_submission)
 

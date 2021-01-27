@@ -22,7 +22,7 @@ def package_data(pkg, roots):
 
 setup(
     name='feedback-xblock',
-    version='1.2.0',
+    version='1.2.1',
     description='XBlock for providing feedback on course content',
     packages=[
         'feedback',

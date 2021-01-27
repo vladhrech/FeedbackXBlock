@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-19 06:33-0500\n"
+"POT-Creation-Date: 2021-01-27 04:39-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,23 +20,15 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: feedback/feedback.py:28
+#: feedback/feedback.py:26
 msgid "What did you learn from this? What was missing?"
 msgstr "Что вы узнали из этого? Чего не хватало?"
 
-#: feedback/feedback.py:29
+#: feedback/feedback.py:27
 msgid "How would you rate this as a learning experience?"
 msgstr "Как бы вы оценили это, как обучающий опыт?"
 
-#: feedback/feedback.py:30
-msgid ""
-"Think about the material, and try to synthesize key lessons learned, as well "
-"as key gaps in our presentation."
-msgstr ""
-"Подумайте о материале и попытайтесь обобщить основные извлеченные уроки, а "
-"также ключевые пробелы в нашей презентации."
-
-#: feedback/feedback.py:32
+#: feedback/feedback.py:28
 msgid ""
 "Take a little bit of time to reflect here. Research shows that a meaningful "
 "synthesis will help you better understand and remember material from this "
@@ -46,61 +38,148 @@ msgstr ""
 "что осмысленный синтез поможет вам лучше понять и запомнить материал этого "
 "курса."
 
-#: feedback/feedback.py:66
+#: feedback/feedback.py:55
 msgid "Freeform user prompts"
 msgstr "Высказывание пользователя в свободной форме"
 
-#: feedback/feedback.py:72 feedback/feedback.py:88
+#: feedback/feedback.py:61 feedback/feedback.py:77
 msgid "Random number generated for p. -1 if uninitialized"
 msgstr "Случайное число сгенерировано для p. -1 если неинициализировано"
 
-#: feedback/feedback.py:77
+#: feedback/feedback.py:66
 msgid "How user voted. -1 if didn't vote"
 msgstr "Как проголосовал пользователь. -1 если не голосовал"
 
-#: feedback/feedback.py:83
+#: feedback/feedback.py:72
 msgid "What percent of the time should this show?"
 msgstr "В каком проценте случаев это должно показываться?"
 
-#: feedback/feedback.py:93
+#: feedback/feedback.py:82
 msgid "A list of user votes"
 msgstr "Список голосов пользователей"
 
-#: feedback/feedback.py:96
+#: feedback/feedback.py:85
 msgid "Feedback"
 msgstr "Отзыв"
 
-#: feedback/feedback.py:100
+#: feedback/feedback.py:89
 msgid "Enables ability to add text feedback for a student"
 msgstr "Позволяет студенту добавить текстовый отзыв"
 
-#: feedback/feedback.py:105
+#: feedback/feedback.py:94
 msgid "Enables ability to add extra 0 grade"
 msgstr "Включить возможность добавлять дополнительную 0 оценку"
 
-#: feedback/feedback.py:109
+#: feedback/feedback.py:98
 msgid "Display Name"
 msgstr "Отображаемое имя"
 
-#: feedback/feedback.py:110
+#: feedback/feedback.py:99
 msgid "Provide Feedback"
 msgstr "Обратная связь"
 
-#: feedback/feedback.py:111
+#: feedback/feedback.py:100 feedback/static/html/studio_view.html:23
 msgid "The display name for this component."
 msgstr "Отображаемое имя данного компонента."
 
-#: feedback/feedback.py:166 feedback/feedback.py:292
+#: feedback/feedback.py:158 feedback/feedback.py:282
 msgid "Thank you for voting!"
 msgstr "Спасибо за Ваш голос!"
 
-#: feedback/feedback.py:289
+#: feedback/feedback.py:279
 msgid "Please, vote!"
 msgstr "Пожалуйста, проголосуйте!"
 
-#: feedback/feedback.py:303
+#: feedback/feedback.py:293
 msgid "Thank you for your feedback!"
 msgstr "Спасибо за Ваш отзыв!"
+
+#: feedback/static/html/studio_view.html:5
+msgid ""
+"This XBlock allows\n"
+"        you to collect student feedback on pieces of the course. This\n"
+"        may be helpful either for course improvement, or to give\n"
+"        students a chance to reflect on what they have done."
+msgstr ""
+"Этот XBlock позволяет \n"
+"        собирать отзывы студентов о частях курса. Это\n"
+"        может быть полезно либо для улучшения курса, либо для того,\n"
+"        чтобы студенты могли подумать о том, что они сделали."
+
+#: feedback/static/html/studio_view.html:10
+msgid ""
+"Prior to using this\n"
+"        block, we recommend reading about best practices in the edX\n"
+"        documentation. In particular, we do recommend asking for\n"
+"        structured, specific feedback, and we advise using this in\n"
+"        conjunction with\n"
+"        the <a href=\"http://edx.readthedocs.org/projects/edx-partner-course-"
+"staff/en/latest/content_experiments/content_experiments_configure.html"
+"\">RCT\n"
+"        framework</a> for matrix sampling."
+msgstr ""
+"Перед использованием этого блока\n"
+"        мы рекомендуем прочитать лучшие практики в документации edX.\n"
+"        В частности, мы рекомендуем запрашивать структурированный,\n"
+"        конкретный отзыв, и мы советуем использовать его вместе с\n"
+"        <a href=\"http://edx.readthedocs.org/projects/edx-partner-course-"
+"staff/en/latest/content_experiments/content_experiments_configure.html"
+"\">RCT\n"
+"        ферймворком</a> для матричной выборки."
+
+#: feedback/static/html/studio_view.html:20
+msgid "Display name"
+msgstr "Отображаемое имя"
+
+#: feedback/static/html/studio_view.html:28
+msgid "Enable text area answer"
+msgstr "Включить ответ в текстовой форме"
+
+#: feedback/static/html/studio_view.html:39
+msgid "Freeform prompt"
+msgstr "Подсказка для текстового поля ответов в произвольной форме"
+
+#: feedback/static/html/studio_view.html:42
+msgid "Example: Please provide us feedback on this section."
+msgstr "Пример: поделитесь с нами своим мнением об этом разделе."
+
+#: feedback/static/html/studio_view.html:47
+msgid "Freeform placeholder"
+msgstr "Содержимое текстового наполнителя"
+
+#: feedback/static/html/studio_view.html:50
+msgid "This is shown as grayed out text before the student has answered."
+msgstr "Содержимое данного поля отображается внутри текстового поля ответов в "
+"свободной форме"
+
+#: feedback/static/html/studio_view.html:55
+msgid "Likert prompt"
+msgstr "Оценочная подсказка"
+
+#: feedback/static/html/studio_view.html:58
+msgid "Example: Please rate your overall experience with this section."
+msgstr "Пример. Оцените, насколько вам понравился этот раздел."
+
+#: feedback/static/html/studio_view.html:62
+msgid "Set your assessment text to the each input below. For example, \"Excellent\"."
+msgstr "Задайте текст экзамена для каждого поля ниже. Например, \"Отлично\"."
+
+#: feedback/static/html/studio_view.html:67
+msgid "Activate 0 grade"
+msgstr "Активировать 0 оценку"
+
+#: feedback/static/html/studio_view.html:74
+#: feedback/static/html/studio_view.html:83
+msgid "Likert option"
+msgstr "Оценочная опция"
+
+#: feedback/static/html/studio_view.html:94
+msgid "Save"
+msgstr "Сохранить"
+
+#: feedback/static/html/studio_view.html:97
+msgid "Cancel"
+msgstr "Отменить"
 
 msgid "Submit Feedback"
 msgstr "Отправить отзыв"
