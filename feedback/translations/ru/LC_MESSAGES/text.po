@@ -145,7 +145,7 @@ msgstr "Пример: поделитесь с нами своим мнением
 
 #: feedback/static/html/studio_view.html:47
 msgid "Freeform placeholder"
-msgstr "Содержимое текстового наполнителя"
+msgstr "Заполнитель произвольной формы"
 
 #: feedback/static/html/studio_view.html:50
 msgid "This is shown as grayed out text before the student has answered."

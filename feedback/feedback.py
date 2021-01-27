@@ -7,15 +7,14 @@ in the course.
 
 import cgi
 import random
+
 import pkg_resources
 import six
 from django.utils.translation import ugettext_lazy as _
-
-from xblock.core import XBlock
-from xblock.fields import Boolean, Dict, Integer, List, Float, Scope, String
-from xblockutils.resources import ResourceLoader
 from web_fragments.fragment import Fragment
-
+from xblock.core import XBlock
+from xblock.fields import Boolean, Dict, Float, Integer, List, Scope, String
+from xblockutils.resources import ResourceLoader
 
 loader = ResourceLoader(__name__)
 
