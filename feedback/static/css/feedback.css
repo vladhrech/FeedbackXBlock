@@ -3,11 +3,11 @@
 /* Overall block. We limit width, and put a very faint
    border around it. */
 .feedback_block {
-    max-width: 1000px;
     border-width: 1px;
     border-style: solid;
     border-color: rgba(0,0,0,0.1);
-    padding: 10px
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 /* Little thank you message div after people vote */
@@ -33,7 +33,30 @@
     border-radius:5px;
     display:inline-block;
     text-align:center;
-    padding:0px 10px 0px 10px;
+    padding:0px 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    max-width: calc(9% - 4px);
+    word-break: break-word;
+}
+
+@media (max-width: 1024px) {
+    .feedback_block .feedback_likert_rating {
+        max-width: 100%;
+        width: 16%;
+    }
+}
+
+@media (max-width: 768px) {
+    .feedback_block .feedback_likert_rating {
+        width: 24%;
+    }
+}
+
+@media (max-width: 550px) {
+    .feedback_block .feedback_likert_rating {
+        width: 32%;
+    }
 }
 
 .feedback_likert_rating {
@@ -58,7 +81,9 @@
    border-width: 1px;
    border-color: rgba(255,255,255,0);
    padding:1px;
-   height:60px;
+   height:55px;
+   border-radius: 50%;
+   box-sizing: border-box;
 }
 
 .feedback_block input[type="radio"]:focus ~ .feedback_icon {
@@ -119,13 +144,14 @@
 }
 
 .feedback_likert_scale {
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .feedback_freeform_area {
     margin: 0px;
-    width: 850px;
+    width: 100%;
     height: 150px;
+    max-width: 100%;
 }
 
 .feedback_submit_feedback {
@@ -142,5 +168,7 @@
 
 .feedback-text-feedback {
     text-align:center;
-    width: 100px;
+    line-height: normal;
+    font-size: 14px;
+    max-width: 100%;
 }
